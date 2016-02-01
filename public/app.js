@@ -1,10 +1,10 @@
-var app = angular.module("instaGal", ['$ng-route']);
+var app = angular.module('instaGal',['ngRoute']);
 
-app.config(['$routeProvider'], function($routeProvider){
-  $routeProvider.
-    when('/gallery', {
-      templateUrl: 'views/gallery.view.html',
-      controller: 'GalleryCtrl'
-    })
-    .otherwise({redirectTo: '/gallery'});
-});
+app.config(['$routeProvider', function($routeProvider){
+	$routeProvider.
+		when('/gallery', {
+			templateUrl: 'views/gallery.view.html',
+			controller: 'GalleryCtrl'
+		})
+		.otherwise({redirectTo: '/gallery'});
+}]);
